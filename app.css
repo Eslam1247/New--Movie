@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    scroll-behavior: smooth;
 }
 
 .foto {
@@ -50,7 +50,7 @@ header{
     line-height: 1.7;
     width: 600px;
 overflow: hidden;
-background-color: rgba(233 233 233 / 10%);
+background-color: rgba(233 233 233 / 20%);
 font-weight: 500;
 }
 
@@ -135,7 +135,7 @@ font-weight: 500;
   position: absolute;
   top: 13%;
   left: 50px;
-  width: 230px;
+  width: 250px;
   opacity: 0;
   transition: 1s all ease-in-out;
 }
@@ -149,7 +149,7 @@ font-weight: 500;
   border: none;
   cursor: pointer;
   position: absolute;
-  bottom: 0;
+  bottom: 27%;
   left: 50px;
   opacity: 0;
   transition: 1s all ease-in-out;
@@ -206,14 +206,12 @@ font-weight: 500;
   background-position: center center;
 }
 
-.featured-title {
-  width: 200px;
-}
 
 .featured-desc {
   width: 500px;
+  height: 100%;
+  padding-top: 110px;
   color: white;
-  padding:110px 0;
   font-weight: 500;
   background-color: rgba(233 233 233 / 20%);
 }
@@ -265,11 +263,10 @@ background-color: rgba(233 233 233 / 20%);
 font-weight: 700;
 }
 
+
 }
 @media (max-width: 641px) {
-  body {
-      font-size: 12px;
-  }
+ 
   .foto {
     background-image: url('img/7.jpg');
     background-repeat: no-repeat;
@@ -297,5 +294,63 @@ overflow: hidden;
 background-color: rgba(233 233 233 / 20%);
 font-weight: 700;
 }
-    
+.movie-list-item-title {
+  background-color: rgb(233, 233, 233);;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 2%;
+  left: 50px; 
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  
+}
+
+
+
+.movie-list-item-desc {
+  background-color: rgb(233, 233, 233);
+  padding: 5px;
+  font-size: 14px;
+  position: absolute;
+  top: 13%;
+  left: 50px;
+  width: 250px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+  padding: 7px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 27%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+}
+
+
+
+.loader-container{
+  position: fixed;
+  top:0; left:0;
+  z-index: 10000;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+}
+
+.loader-container.fade-out{
+  top:-120%;
 }
