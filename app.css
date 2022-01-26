@@ -16,21 +16,23 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 160px;
+    padding: 10px 80px;
+background-color: red;
 }
 
 .logo {
     font-size: 2em;
     font-weight: 700;
     text-decoration: none;
-    color: white;
+  color: white;
+  text-transform: uppercase;
 
 }
 
 
 
 .navbar a {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: 600;
     padding-left: 30px;
     color: white;
@@ -160,8 +162,8 @@ font-weight: 500;
   position: absolute;
   top: 90px;
   right: 0;
-  color: lightgray;
-  opacity: 0.5;
+  color:white;
+  opacity: 0.9;
   cursor: pointer;
 }
 
@@ -236,7 +238,7 @@ font-weight: 500;
     height: 100vh;
   }
   .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 700;
     text-decoration: none;
     color: white;
@@ -339,3 +341,65 @@ font-weight: 700;
 
 
 
+.ham {
+  display: none;
+  cursor: pointer;
+}
+
+.ham .bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 7px auto;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+
+@media (max-width : 768px) {
+  .ham {
+      display: block;
+  }
+
+  .ham.active .bar:nth-child(2){
+opacity: 0;
+  }
+  .ham.active .bar:nth-child(1){
+      transform: translateY(15px) rotate(45deg);
+  }    
+  .ham.active .bar:nth-child(3){
+      transform: translateY(-6px) rotate(-45deg);
+          }
+  .navbar {
+      position: fixed;
+      display: flex;
+      left:-100%;
+      top: 70px;
+      gap: 0;
+      text-align: center;
+      flex-direction: column;
+      background-color: red;
+      color: white;
+      width: 100%;
+      transition:  .6s ease;
+  }        
+  .navbar a {
+      margin: 16px 0;
+  }
+  .navbar.active {
+      left: 0;
+}
+
+}
+#up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  background-color: red;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 10px;
+}
